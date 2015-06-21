@@ -1,26 +1,57 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Site title and subtitle. This is used in _includes/header.html
+title: 'jekyll-docs-template'
+subtitle: 'Painless documentation for your projects'
 
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
+# if you wish to integrate disqus on pages set your shortname here
+disqus_shortname: ''
 
-# Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
+# if you use google analytics, add your tracking id here
+google_analytics_id: ''
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+# Enable/show navigation. There are there options:
+#   0 - always hide
+#   1 - always show
+#   2 - show only if posts are present
+navigation: 2
 
-paginate:         5
+# URL to source code, used in _includes/footer.html
+codeurl: 'https://github.com/bruth/jekyll-docs-template'
 
-# Custom vars
-version:          2.1.0
+# Default categories (in order) to appear in the navigation
+sections: [
+    ['doc', 'Documentation'],
+    ['tut', 'Tutorial'],
+    ['ref', 'Reference'],
+    ['dev', 'Developers'],
+    ['post', 'Posts']
+]
 
-github:
-  repo:           https://github.com/poole/hyde
+# Keep as an empty string if served up at the root. If served up at a specific
+# path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
+baseurl: ''
+
+# Dates are not included in permalinks
+permalink: none
+
+# Syntax highlighting
+highlighter: pygments
+
+# Since these are pages, it doesn't really matter
+future: true
+
+# Exclude non-site files
+exclude: ['bin', 'README.md']
+
+# Use the redcarpet Markdown renderer
+markdown: redcarpet
+redcarpet:
+    extensions: [
+        'no_intra_emphasis',
+        'fenced_code_blocks',
+        'autolink',
+        'strikethrough',
+        'superscript',
+        'with_toc_data',
+        'tables',
+        'hardwrap'
+    ]
